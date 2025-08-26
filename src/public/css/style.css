@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --background-primary: #2c2f33;
+    --background-secondary: #23272a;
+    --background-tertiary: #1a1c1e;
+    --text-primary: #ffffff;
+    --text-secondary: #b9bbbe;
+    --accent-color: #7289da;
+    --border-color: #40444b;
+    --red-color: #f04747;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.hidden {
+    display: none !important;
+}
+
+#welcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--background-secondary);
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 14px 0 rgba(0, 0, 0, 0.25);
+}
+
+#welcome h1 {
+    margin-bottom: 20px;
+}
+
+#welcome form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+#welcome input {
+    background-color: var(--background-tertiary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+#welcome button {
+    background-color: var(--accent-color);
+    color: var(--text-primary);
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+#welcome button:hover {
+    background-color: #677bc4;
+}
+
+#call {
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--background-secondary);
+    padding: 10px 20px;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex: 1;
+    background-color: var(--background-primary);
+}
+
+#videos {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+.video-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+#videos video {
+    border-radius: 8px;
+    width: 100%;
+    max-width: 640px;
+    background-color: var(--background-tertiary);
+}
+
+.nickname {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#controls {
+    background-color: var(--background-secondary);
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#controls button {
+    background-color: var(--accent-color);
+    color: var(--text-primary);
+    border: none;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.2s;
+}
+
+#controls button:hover {
+    background-color: #677bc4;
+}
+
+#controls button.recording i {
+    animation: blink 1s infinite;
+    color: var(--red-color);
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+#controls select {
+    background-color: var(--background-tertiary);
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    border-radius: 4px;
+    padding: 8px;
+}
+
+#roomHeader {
+    text-align: center;
+    padding: 10px;
+    background-color: var(--background-secondary);
+}
+
+#downloadLinks {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+#downloadLinks a {
+    color: var(--accent-color);
+    cursor: pointer;
+}
+
+#downloadLinks a.downloaded {
+    color: var(--text-secondary);
+    pointer-events: none;
+}
